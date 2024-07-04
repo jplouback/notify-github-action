@@ -8,12 +8,14 @@ async function run() {
     console.log("hookUrl ===============")
     console.log(hookUrl)
 
+    console.log('passou aqui 1');
+
     const msg = {
       text: "consegui!!"
-    }
+    };
 
     const body = JSON.parse(msg);
-    console.log('passou aqui 1')
+    console.log('passou aqui 1');
     const response = await fetch(hookUrl, {
       body,
       method: "POST"
@@ -29,7 +31,7 @@ async function run() {
 
 
   } catch (error) {
-    
+    console.log(error)
   }
   
 }

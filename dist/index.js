@@ -31094,7 +31094,7 @@ async function run() {
       text: "consegui!!"
     };
 
-    const body = JSON.parse(msg);
+    const body = JSON.stringify(msg);
     console.log('passou aqui 1');
     const response = await fetch(hookUrl, {
       body,

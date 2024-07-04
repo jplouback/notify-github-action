@@ -11,7 +11,7 @@ async function run() {
     const msg = {
       text: "consegui!!"
     }
-    
+
     const body = JSON.parse(msg);
 
     if(hookUrl) {
@@ -19,8 +19,10 @@ async function run() {
         body,
         method: "POST"
       })
+      
       const app = await response.json()
       console.log(app)
+      console.log('passou aqui')
       core.setOutput("debug", app);
     } else {
       core.setOutput("debug", "hookUrl é obrigatório");

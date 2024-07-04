@@ -1,0 +1,5 @@
+instal ncc
+  npm i -g @vercel/ncc
+
+build
+  ncc build src/index.js -o dist

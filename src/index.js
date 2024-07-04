@@ -29,7 +29,7 @@ async function run() {
     //   core.setOutput("debug", "hookUrl é obrigatório");
     // }
 
-    console.log('finalizou aqui!')
+    console.log('finalizou aqui!!')
 
 
   } catch (error) {

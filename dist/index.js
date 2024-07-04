@@ -31093,21 +31093,17 @@ async function run() {
     }
 
     const body = JSON.parse(msg);
-
-    // if(hookUrl) {
-      const response = await fetch(hookUrl, {
-        body,
-        method: "POST"
-      })
+    console.log('passou aqui 1')
+    const response = await fetch(hookUrl, {
+      body,
+      method: "POST"
+    })
       
-      const app = await response.json()
-      console.log(app)
-      console.log('passou aqui')
-      core.setOutput("debug", app);
-    // } else {
-    //   console.log('else -----------------------')
-    //   core.setOutput("debug", "hookUrl é obrigatório");
-    // }
+    const app = await response.json()
+    
+    console.log('passou aqui')
+    core.setOutput("debug", app);
+    
 
     console.log('finalizou aqui!!')
 

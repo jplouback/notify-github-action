@@ -4,7 +4,7 @@ const github = require('@actions/github');
 async function run() {
   try {
     const hookUrl = core.getInput('hook-url');
-    
+    console.log('test')
     console.log("hookUrl ===============")
     console.log(hookUrl)
 
@@ -14,7 +14,7 @@ async function run() {
 
     const body = JSON.parse(msg);
 
-    if(hookUrl) {
+    // if(hookUrl) {
       const response = await fetch(hookUrl, {
         body,
         method: "POST"
@@ -24,12 +24,12 @@ async function run() {
       console.log(app)
       console.log('passou aqui')
       core.setOutput("debug", app);
-    } else {
-      console.log('else -----------------------')
-      core.setOutput("debug", "hookUrl é obrigatório");
-    }
+    // } else {
+    //   console.log('else -----------------------')
+    //   core.setOutput("debug", "hookUrl é obrigatório");
+    // }
 
-    console.log('finalizou aqui')
+    console.log('finalizou aqui!')
 
 
   } catch (error) {

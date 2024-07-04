@@ -31084,11 +31084,22 @@ const github = __nccwpck_require__(731);
 async function run() {
   try {
     const hookUrl = core.getInput('hook-url');
-    const src = __dirname
-
+    
+    console.log("hookUrl ===============")
     console.log(hookUrl)
 
-    core.setOutput("debug", "debug finalizado");
+    if(hookUrl) {
+      const response = await fetch(hookUrl, {
+        body: {
+          text: 'consegui'
+        }
+      })
+      const app = await response.json()
+      core.setOutput("debug", app);
+    } else {
+      core.setOutput("debug", "hookUrl é obrigatório");
+    }
+
 
   } catch (error) {
     

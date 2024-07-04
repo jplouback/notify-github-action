@@ -31105,8 +31105,11 @@ async function run() {
       console.log('passou aqui')
       core.setOutput("debug", app);
     } else {
+      console.log('else ----------------------')
       core.setOutput("debug", "hookUrl é obrigatório");
     }
+
+    console.log('finalizou aqui')
 
 
   } catch (error) {

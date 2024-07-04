@@ -5,6 +5,10 @@ inputs:
     description: 'Url do Hook'
     required: true
     default: ''
+  object:  # id of input
+    description: 'Url do Hook'
+    required: true
+    default: ''
 outputs:
   debug: # id of output
     description: 'debug test'

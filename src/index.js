@@ -11,7 +11,7 @@ async function run() {
     if(hookUrl) {
       const response = await fetch(hookUrl, {
         body: {
-          text: "consegui!!"
+          "text": "consegui!!"
         },
         method: "POST"
       })

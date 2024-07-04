@@ -31088,11 +31088,15 @@ async function run() {
     console.log("hookUrl ===============")
     console.log(hookUrl)
 
+    const msg = {
+      text: "consegui!!"
+    }
+    
+    const body = JSON.parse(msg);
+
     if(hookUrl) {
       const response = await fetch(hookUrl, {
-        body: {
-          "text": "consegui!!"
-        },
+        body,
         method: "POST"
       })
       const app = await response.json()

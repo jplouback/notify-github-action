@@ -31091,10 +31091,12 @@ async function run() {
     if(hookUrl) {
       const response = await fetch(hookUrl, {
         body: {
-          text: 'consegui'
-        }
+          text: "consegui!!"
+        },
+        method: "POST"
       })
       const app = await response.json()
+      console.log(app)
       core.setOutput("debug", app);
     } else {
       core.setOutput("debug", "hookUrl é obrigatório");
